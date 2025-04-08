@@ -1,0 +1,195 @@
+/* === Contact Bar Styling === */
+.contactBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #778da9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px; 
+    padding: 3px;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+  }
+  
+  .innerbar {
+    display: flex;
+    width: 55vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contactInfo {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contactInfo a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contactInfo a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social media icons */
+  .socialIcons a {
+    color: white;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .socialIcons a:hover {
+    color: #79baff;
+  }
+  
+  /* === Navbar Styling === */
+  .navbar {
+    position: fixed;
+    top: 30px; /* Adjusted to 30px to ensure it stays below the contact bar */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbarContainer {
+    width: 100%;
+    max-width: 130vh; /* Adjusted to fit screen width */
+    height: 100%;
+    height:12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.5px;
+    margin-left: 2vh;
+  }
+  
+  /* === Nav Links === */
+  .navLinks {
+    list-style: none;
+    display: flex;
+    margin-right: 2vh;
+    gap: 2rem;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #79baff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navLinks li a:hover::after {
+    width: 100%;
+  }
+  
+  /* === Hamburger Menu === */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 3vh;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #111;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+  
+  /* Open state */
+  .open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .open span:nth-child(2) {
+    opacity: 0;
+  }
+  .open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      right: 10%;
+      width: 25%;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 2rem;
+      border-top: none;
+    }
+  
+    .active {
+      max-height: 300px;
+      max-width: 110px;
+      padding-bottom: 1rem;
+      border-radius: 2vh;
+      border: 2px solid #79baff;
+     
+    }
+  
+    .navLinks li {
+      margin-top: 1rem;
+      text-align: right;
+      width: 100%;
+    }
+  }
+  
+  /* === Hide Contact Bar under 400px === */
+  @media (max-width: 400px) {
+    .contactBar {
+      display: none;
+    }
+  
+    /* Move Navbar up when Contact Bar is hidden */
+    .navbar {
+      top: 0; /* Adjust navbar top value to stay at the top when the contact bar is hidden */
+    }
+  }
+  

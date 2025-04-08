@@ -1,0 +1,123 @@
+/* === Layout Styling === */
+
+.main-content {
+  flex: 1; /* Fyller den lediga höjden, vilket trycker foten längst ner */
+}
+
+.footer {
+  background-color: #778da9;
+  color: white;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.newdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* mobil först - staplat */
+  width: 100%;
+  max-width: 100vh;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column; /* mobil först - staplat */
+  align-items: center;
+  gap: 30px;
+  max-width: 90vh;
+  width: 100%;
+}
+
+.phone,
+.socialIcons,
+.address {
+  display: flex;
+  flex-direction: column; /* h3 ovanpå innehållet */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.phone a,
+.address p {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.socialIcons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #111;
+}
+
+/* === HR Styling === */
+hr {
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+  background: linear-gradient(to right, transparent, #ffffff, transparent);
+  width: 80%;
+}
+
+
+/* === Copyright Styling === */
+.copyright p {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* === Responsive Design === */
+@media (min-width: 768px) {
+  .newdiv {
+    flex-direction: row; /* radvis */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contactInfo {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    gap: 40px;
+  }
+
+  .phone,
+  .socialIcons,
+  .address {
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 0;
+    width: 30vh;
+    
+  }
+
+  .socialIcons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .phone a,
+  .address p {
+    text-align: center;
+  }
+}

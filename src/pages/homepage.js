@@ -54,11 +54,19 @@ const Homepage = () => {
       </div>
 
       <div className={styles.whyChooseUs}>
+        <div className={styles.whyChooseUsinner}>
         <h2>Varför välja oss som hantverkare?</h2>
-        <p>
-          Vi är erfarna, pålitliga och arbetar alltid med kunden i fokus. Vi garanterar
-          kvalitetsarbete och erbjuder skräddarsydda lösningar för varje projekt.
-        </p>
+<p>
+  Att välja rätt hantverkare kan vara avgörande för resultatet av ditt projekt – och vi är här för att göra det valet enkelt för dig. Med många års erfarenhet i branschen levererar vi inte bara högkvalitativt hantverk, utan också en smidig, trygg och personlig upplevelse från start till mål. Vi sätter alltid kundens behov i första rummet och lyssnar noggrant för att förstå dina önskemål och förväntningar.
+</p>
+<p>
+  Vårt team består av noggrant utvalda yrkespersoner som är stolta över sitt arbete och som aldrig lämnar något åt slumpen. Oavsett om det handlar om en mindre renovering eller ett större byggprojekt, kan du lita på att vi håller vad vi lovar, levererar i tid och med ett slutresultat du kommer att vara stolt över. Vi erbjuder skräddarsydda lösningar som anpassas helt efter dina behov och förutsättningar – alltid med kvalitet, kommunikation och kundnöjdhet i fokus.
+</p>
+
+        </div>
+      </div>
+      <div>
+
       </div>
     </div>
   );

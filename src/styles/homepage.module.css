@@ -111,7 +111,46 @@
   background-color: #778da9;
   color: #ffffff;
 }
+.whyChooseUs{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: rgb(2, 2, 2);
+  margin-top:5vh;
+  margin-bottom:5vh;
+}
+.whyChooseUsinner {
+  width: 100%;
+  max-width: 95vh;
+  padding: 1rem;
+  position: relative;
+  margin: 5px;
+}
 
+.whyChooseUsinner::before,
+.whyChooseUsinner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 1px; /* Tjocklek på fade-linje */
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.whyChooseUsinner::before {
+  left: 0;
+  background: linear-gradient(to bottom, #778da9, transparent);
+}
+
+.whyChooseUsinner::after {
+  right: 0;
+  background: linear-gradient(to top,#778da9, transparent);
+}
 
 
 
@@ -172,6 +211,22 @@
   .tabContent p {
     font-size: 1rem;
     margin-bottom: 2vh;
+  }
+  .tabs {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s;
   }
 }
 

@@ -29,11 +29,13 @@ const Navbar = () => {
         
         </div>
       </div>
-
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={styles.navbarContainer}>
-          <div className={styles.logo}>Demo byggfirma</div>
+          <div className={styles.logo}><a href="/" className={styles.logo}>
+  Demo byggfirma
+</a>
+</div>
 
           <div
             className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}

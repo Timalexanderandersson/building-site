@@ -15,8 +15,8 @@ const Homepage = () => {
 
         <div className={styles.overlayContent}>
           <div className={styles.leftBox}>
-          <h1>Välkommen till din pålitliga hantverkspartner</h1>
-<p>Vi förvandlar dina idéer till verklighet med kvalitet, noggrannhet och ett öga för detaljer.</p>
+          <h1>Din pålitliga hantverkspartner</h1>
+<p>Vi förvandlar dina idéer till verklighet med kvalitet, vi löser dina byggnationer och fixer de ni är i behova av</p>
 
           </div>
 
@@ -35,7 +35,6 @@ const Homepage = () => {
                 Offert
               </button>
             </div>
-
             <div className={styles.tabContent}>
               {activeTab === 'kontakt' && (
                 <>

@@ -1,123 +1,118 @@
-/* === Layout Styling === */
-
-.main-content {
-  flex: 1; /* Fyller den lediga höjden, vilket trycker foten längst ner */
-}
-
 .footer {
   background-color: #778da9;
   color: white;
-  
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
+ 
   width: 100%;
+  bottom: 0;
+  position: absolute;
+  box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.3);
 }
 
 .newdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* mobil först - staplat */
+  
   width: 100%;
-  max-width: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.contactInfo {
+.footerContent {
   display: flex;
-  flex-direction: column; /* mobil först - staplat */
+  flex-direction: column;
+  gap: 2rem;
+ justify-content: center;
   align-items: center;
-  gap: 30px;
-  max-width: 90vh;
-  width: 100%;
-}
-
-.phone,
-.socialIcons,
-.address {
-  display: flex;
-  flex-direction: column; /* h3 ovanpå innehållet */
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
   width: 100%;
   
 }
 
-.phone a,
-.address p {
+/* Varje sektion (ikon + text) */
+.footerSection {
+  
+  width: 19vh;
+  text-align: left;
+  
+
+}
+
+
+.footerSection h4 {
+  font-weight: bold;
+  
+  margin-bottom: 0.5rem;
+}
+
+.footerSection p,
+.footerSection a {
+  
+  margin: 0;
   color: white;
-  font-weight: 500;
   text-decoration: none;
 }
 
-.socialIcons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 20px;
-  transition: color 0.3s;
+/* Blå accent på länkar */
+.footerSection a:hover {
+  color: #00bfff;
 }
 
-.socialIcons a:hover {
-  color: #111;
-}
-
-/* === HR Styling === */
+/* Horisontell linje */
 hr {
   border: 0;
   height: 1px;
-  margin: 20px 0;
-  background: linear-gradient(to right, transparent, #ffffff, transparent);
+  background: linear-gradient(to right, transparent, white, transparent);
   width: 80%;
+  margin: 2rem auto;
 }
 
 
-/* === Copyright Styling === */
-.copyright p {
-  font-size: 14px;
-  color: white;
+/* Copyright längst ner */
+.copyright {
   text-align: center;
+  font-size: 14px;
+  padding: 1vh;
+  color: white;
 }
-
-/* === Responsive Design === */
+.contactLink{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.contactLink:hover{
+  color: #79baff;
+ 
+}
+/* Desktop-layout */
 @media (min-width: 768px) {
-  .newdiv {
-    flex-direction: row; /* radvis */
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .contactInfo {
+  .footerContent {
     flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    gap: 40px;
-  }
-
-  .phone,
-  .socialIcons,
-  .address {
-    width: auto;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border-bottom: none;
-    padding-bottom: 0;
-    width: 30vh;
-    
+    text-align: right;
   }
 
-  .socialIcons {
-    margin-left: auto;
-    margin-right: auto;
+  .footerSection {
+    text-align: right;
   }
 
-  .phone a,
-  .address p {
-    text-align: center;
+  .newsletterInput {
+    text-align: right;
+  }
+  .footerSection {
+    text-align: left;
+    padding: 3vh;
+  }
+  
+  .footerSection h4 {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footerSection p,
+  .footerSection a {
+    text-align: left;
+    margin: 0;
+    color: white;
+    text-decoration: none;
   }
 }

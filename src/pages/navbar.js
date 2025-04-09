@@ -9,9 +9,13 @@ const Navbar = () => {
       {/* Contact Bar */}
       <div className={styles.contactBar}>
         <div className={styles.innerbar}>
+          
         <span className={styles.contactInfo}>
-          <a href="tel:+1234567890"><strong>Kontakta oss på:</strong> +123 456 7890</a> | 
-          <a href="mailto:info@example.com"> info@example.com</a>
+        <span><strong>Kontakta oss på:</strong></span>
+<a href="tel:+1234567890">+123 456 7890</a> | 
+<span><strong>Email:</strong></span>
+<a href="mailto:info@example.com">info@example.com</a>
+
         </span>
         <div className={styles.socialIcons}>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">

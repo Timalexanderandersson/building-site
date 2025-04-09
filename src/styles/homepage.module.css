@@ -19,7 +19,7 @@
   width: 100%;
   height: 75vh;
   overflow: hidden;
-  padding-top: 12vh; /* Lägg till padding för att skapa utrymme för navbaren */
+ 
 }
 
 .video {
@@ -113,9 +113,13 @@
 }
 
 
+
+
+
+
 @media (max-width: 768px) {
   .overlayContent {
-    top: 58%;
+    top: 56%;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -123,6 +127,14 @@
     justify-content: flex-start; /* Ta bort space-between och använd flex-start */
     padding: 1rem;
     gap: 0; /* Ta bort gap mellan boxarna */
+  }
+
+  .videoContainer {
+    position: relative;
+    width: 100%;
+    height: 81vh;
+    overflow: hidden;
+    padding-top: 11vh; /* Lägg till padding för att skapa utrymme för navbaren */
   }
 
   .leftBox,
@@ -138,7 +150,7 @@
   }
 
   .leftBox h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .leftBox p {
@@ -163,3 +175,26 @@
   }
 }
 
+@media (max-width: 322px) {
+  .overlayContent {
+    top: 56%; /* Justera för att ge mer utrymme för navbaren */
+    padding: 0.5rem;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+  }
+
+  .videoContainer {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Gör videon lite mindre på riktigt små skärmar */
+    overflow: hidden;
+    padding-top: 10vh; /* Justera för att ge mer utrymme för navbaren */
+  }
+
+
+}

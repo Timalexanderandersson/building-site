@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.videoContainer}>
-        <video className={styles.video} autoPlay loop muted>
+        <video className={styles.video} autoPlay loop muted playsInline >
           <source src={video} type="video/mp4" />
           Din webbläsare stödjer inte videouppspelning.
         </video>

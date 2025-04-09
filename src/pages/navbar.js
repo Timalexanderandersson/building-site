@@ -47,6 +47,7 @@ const Navbar = () => {
           </div>
 
           <ul className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
+          <li><a href="#omoss">Hem </a></li>
             <li><a href="#omoss">Om oss </a></li>
             <li><a href="#tjanster">Våra tjänster</a></li>
             <li><a href="#kontakt">Kontakt</a></li>

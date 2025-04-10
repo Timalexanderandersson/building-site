@@ -1,17 +1,31 @@
 .aboutUsContainer {
-    padding: 40px;
-    max-width: 1200px;
+   
+    padding-top: 12vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .aboutUsContainerinner {
+   max-width: 95vh;
+    width: 100%;
   }
   
+  
   .header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
+    padding-left: 1vh;
   }
   
   .header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color:#778da9;
   }
   
   .header p {
@@ -21,11 +35,15 @@
   
   .missionSection {
     margin-bottom: 60px;
+    text-align: left;
+    padding-left: 1vh;
   }
   
   .missionSection h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color:#778da9;
   }
   
   .missionSection p {
@@ -76,11 +94,15 @@
   
   .contactSection {
     text-align: center;
+    
+    margin-bottom: 9vh;
   }
   
   .contactSection h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color:#778da9;
   }
   
   .contactSection p {
@@ -90,10 +112,11 @@
   }
   
   .contactButton {
-    background-color: #007BFF;
-    color: white;
+    background-color: transparent;
+    color: #000000;
+    border: 1px #555 solid;
     padding: 12px 30px;
-    border: none;
+    
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
@@ -101,13 +124,24 @@
   }
   
   .contactButton:hover {
-    background-color: #0056b3;
+    background-color:#778da9;
+    border: 1px #fafafa solid;
   }
   
   @media (max-width: 768px) {
     .teamMembers {
       flex-direction: column;
       align-items: center;
+    }
+    .missionSection {
+      margin-bottom: 60px;
+      text-align: center;
+      
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
     }
   
     .teamMember {

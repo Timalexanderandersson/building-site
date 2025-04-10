@@ -1,0 +1,127 @@
+.quoteSection {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 5rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 18vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #778da9;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%; /* Justera till 100% för att säkerställa full bredd */
+}
+
+@media (min-width: 600px) {
+    .inputGroup {
+        flex-direction: row;
+    }
+}
+
+input,
+textarea {
+    width: 100%; /* Säkerställer att fälten tar upp 100% av bredden */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Detta gör att padding inte påverkar bredden */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #778da9;
+    box-shadow: 0 0 0 4px rgba(13, 59, 102, 0.1);
+    outline: none;
+}
+
+.button {
+    height: 36px;
+    padding: 0 3rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-color: black;
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: #778da9;
+    transform: translateY(-2px);
+    border-color: rgb(255, 255, 255);
+}
+
+.features {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.features h4 {
+    color: #778da9;
+    margin-bottom: 0.5rem;
+}
+
+.features p {
+    color: #333;
+    line-height: 1.4;
+}

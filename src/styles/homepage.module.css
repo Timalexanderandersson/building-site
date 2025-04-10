@@ -282,11 +282,9 @@
 .openingHoursText {
   flex: 1;
   padding-right: 20px;
-
   text-align: left;
   
 }
-
 .openingHoursText h2 {
   font-size: 2rem;
   margin-bottom: 10px;

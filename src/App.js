@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/aboutus';
+import Services from './pages/service';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes> 
           <Route path="/" element={<Homepage />} /> 
           <Route path="/omoss" element={<AboutUs />} /> 
-          <Route path="/tjänster" element={<div>tjänster</div>} />
+          <Route path="/tjänster" element={<Services />} />
           <Route path="/kontakt" element={<div>kontakt</div>} /> 
           <Route path="/offert" element={<div>Offert</div>} />
         </Routes>

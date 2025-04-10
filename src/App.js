@@ -11,6 +11,7 @@ import AboutUs from './pages/aboutus';
 import Services from './pages/service';
 import Contact from './pages/contact';
 import Quote from './pages/offert';
+import NotFound from './pages/404';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path="/tjänster" element={<Services />} />
           <Route path="/kontakt" element={<Contact />} /> 
           <Route path="/offert" element={< Quote/>} />
-          <Route path="*" element={< Quote/>} />
+          <Route path="*" element={< NotFound/>} />
         </Routes>
         <Footer />
       </div>

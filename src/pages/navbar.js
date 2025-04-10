@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styles from '../styles/navbar.module.css'; 
+import styles from '../styles/navbar.module.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,9 +33,9 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={styles.navbarContainer}>
-          <div className={styles.logo}><a href="/" className={styles.logo}>
+          <div className={styles.logo}><Link to="/" className={styles.logo}>
   Demo byggfirma
-</a>
+</Link>
 </div>
 
           <div
@@ -47,11 +48,11 @@ const Navbar = () => {
           </div>
 
           <ul className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`}>
-          <li><a href="#omoss">Hem </a></li>
-            <li><a href="#omoss">Om oss </a></li>
-            <li><a href="#tjanster">Våra tjänster</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="#offert">Offert</a></li>
+          <li><Link to="/">Hem</Link></li>
+          <li><Link to="/omoss">Om oss</Link></li>
+<li><Link to="/tjänster">Våra tjänster</Link></li>
+<li><Link to="/kontakt">Kontakt</Link></li>
+<li><Link to="/offert">Offert</Link></li>
           </ul>
         </div>
       </nav>

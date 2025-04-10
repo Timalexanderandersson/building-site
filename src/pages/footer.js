@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/footer.module.css';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa'; // Importera ikoner
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -30,9 +31,9 @@ const Footer = () => {
         </h2>
         <p style={{ textAlign: 'center' }}>
           <span>Ta kontakt med oss! </span>
-          <a href="/kontakt" className={styles.contactLink}>
+          <Link to="/kontakt" className={styles.contactLink}>
             Kontakta oss
-          </a>
+          </Link>
         </p>
 
         <hr />

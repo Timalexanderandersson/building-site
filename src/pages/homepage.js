@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import newpic from '../assets/newpic.jpg';
 import nextnew from '../assets/nextnew.jpg';
 import tryagain from '../assets/tryagain.jpg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -60,13 +61,13 @@ const Homepage = () => {
               {activeTab === 'kontakt' && (
                 <>
                   <p>Har du frågor eller funderingar? Vi finns här för att hjälpa dig – snabbt, enkelt och utan krångel.</p>
-                  <a href="/kontakt" className={styles.button}>Gå till Kontakt</a>
+                  <Link to="/kontakt" className={styles.button}>Gå till Kontakt</Link>
                 </>
               )}
               {activeTab === 'offert' && (
                 <>
                   <p>Få en kostnadsfri offert anpassad efter ditt projekt – enkelt och smidigt.</p>
-                  <a href="/offert" className={styles.button}>Gå till Offert</a>
+                  <Link to="offert" className={styles.button}>Gå till Offert</Link>
                 </>
               )}
             </div>
@@ -116,7 +117,7 @@ const Homepage = () => {
       </div>
       <div className={styles.servicesPreview}>
       <p>
-    Kika igenom <strong><a className={styles.buttontj} href="/tjanster">våra tjänster</a></strong> för mer information om vad vi jobbar med.
+    Kika igenom <strong><Link className={styles.buttontj} to="/tjänster">våra tjänster</Link></strong> för mer information om vad vi jobbar med.
   </p>
   <Slider {...carouselSettings}>
     <div><img src={newpic} alt="Tjänst 1" className={styles.carouselImage} /></div>
